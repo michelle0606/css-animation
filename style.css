@@ -1,0 +1,151 @@
+html,body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  color: #fff;
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: auto;
+  cursor: pointer;
+}
+
+.fas {
+  color: #fff;
+  font-size: 34px;
+}
+
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6); 
+  z-index: 0; 
+}
+
+main {
+  position: relative;
+  display: flex;
+  text-align: center;
+  flex-flow: row wrap;
+}
+
+.container {
+  background-image: url('https://picsum.photos/1440/1240');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+
+header {
+  height: 80px;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  margin-left: 50px;
+}
+
+nav {
+  margin-right: 50px;
+}
+
+.item { 
+  display: flex;
+  z-index: 10px;
+  position: relative;
+  margin: 40px 100px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#one {
+  margin-top: 50px;
+}
+
+.show {
+  position: fixed;
+  top: 0vw;
+  right: 0vh;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  z-index: 99;
+}
+
+@keyframes show {
+  0%{
+    opacity: 0;
+    top: 0px;
+    right: 0px;
+    width: 0vw;
+    height: 0vh;
+  }
+  100%{
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.fa-angle-left {
+  color: #fff;
+}
+
+.press {
+  padding: 20px 30px;
+  position: fixed;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 70%;
+  z-index: 2000;
+  top: 50vh;
+  left: -5vw;
+  animation-name: press;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes press {
+  0%{
+    top: 50vh;
+    left: -5vw;
+  }
+  100%{
+    top: 50vh;
+    left: 0vw;
+  }
+}
+
+.exit {
+  display: none;
+}
