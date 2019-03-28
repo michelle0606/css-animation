@@ -2,26 +2,31 @@ const one = document.getElementById('one')
 const two = document.getElementById('two')
 const three = document.getElementById('three')
 const btn = document.querySelector('.exit')
+const main = document.querySelector('main')
 
 
-one.onclick = e => {
-  btn.classList = 'press'
-  one.classList.add('show')
+main.onclick = e => {
+  let i = e.target
+  if (i.matches('#one')) {
+    showAll('one')
+  } else if (i.matches('#two')) {
+    showAll('two')
+  } else if (i.matches('#three')) {
+    showAll('three')
+  }
 }
 
-two.onclick = e => {
+function showAll(i) {
   btn.classList = 'press'
-  two.classList.add('show')
-}
+  console.log(i)
+  main.innerHTML += `
+    <div id=${i} class='show target' >
+    </div>   
+  `
+  let target = document.querySelector('.target')
 
-three.onclick = e => {
-  btn.classList = 'press'
-  three.classList.add('show')
-}
-
-btn.onclick = e => {
-  btn.classList = 'exit'
-  one.classList.remove('show')
-  two.classList.remove('show')
-  three.classList.remove('show')
+  btn.onclick = e => {
+    btn.classList = 'exit'
+    main.removeChild(target)
+  }
 }

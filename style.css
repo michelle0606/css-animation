@@ -83,7 +83,24 @@ nav {
 }
 
 #one {
-  margin-top: 50px;
+  background-image: url('https://picsum.photos/540/300.2');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+#two {
+  background-image: url('https://picsum.photos/540/300');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+#three {
+  background-image: url('https://picsum.photos/540/300.1');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
 .show {
@@ -128,7 +145,7 @@ button {
   border-radius: 70%;
   z-index: 2000;
   top: 50vh;
-  left: -5vw;
+  left: -10vw;
   animation-name: press;
   animation-duration: 1s;
   animation-delay: 1s;
@@ -138,7 +155,7 @@ button {
 @keyframes press {
   0%{
     top: 50vh;
-    left: -5vw;
+    left: -10vw;
   }
   100%{
     top: 50vh;
